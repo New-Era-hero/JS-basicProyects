@@ -1,0 +1,3 @@
+éste es un pequeño proyecto que podría servir como inspiracion para crear algo mejor....
+aunque actualmente solo sirve para hacer de tarea o inspiracion para un proyecto final o práctica
+para alguien que éste en un curso de nivel basico de prog
