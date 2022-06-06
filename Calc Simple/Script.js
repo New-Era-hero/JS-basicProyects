@@ -1,4 +1,4 @@
-//calculadora con las 4 operaciones basicas
+//calculadora con 7 operaciones basicas
 //functions & vars
 
 let n1 = 0;
