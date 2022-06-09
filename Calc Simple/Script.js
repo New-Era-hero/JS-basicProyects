@@ -60,7 +60,7 @@ ope = () => {
     while (op != 0) {
         console.count("Numero de operaciones");
         count++
-        if (count >= 10) console.log(`llevas ${count} operaciones...te recomiendo que recarges la pagina asi ahorraras mas memoria XD`), alert(`felicidades llevas ${count} operaciones`);
+        if (count >= 10) console.log(`llevas ${count} operaciones...te recomiendo que recarges la pagina asi ahorraras mas memoria XD`);
         else if (count >= 100) console.warn(`wow llevas ${count} operaciones...dud ahora si es recomendable que actualices la pagina`), alert(`wow llevas ${count} operaciones que locura no pensé que llegaras a tanto`);
         else {
             if (op == 1) {
