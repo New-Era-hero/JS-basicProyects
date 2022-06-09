@@ -4,6 +4,7 @@
 let n1 = 0;
 let n2 = 0;
 let op = 0;
+let count = 0;
 
 class Calculadora {
     sumar(n1, n2) {
@@ -57,53 +58,59 @@ const start = (f) => {
 
 ope = () => {
     while (op != 0) {
-        if (op == 1) {
-            n1 = parseInt(prompt("Ingresa el primer numero"));
-            n2 = parseInt(prompt("Ingresa el segundo numero"));
-            alert(`${n1} + ${n2} = ${calculadora.sumar(n1, n2)}`);
-            start();
+        console.count("Numero de operaciones");
+        count++
+        if (count >= 10) console.log(`llevas ${count} operaciones...te recomiendo que recarges la pagina asi ahorraras mas memoria XD`), alert(`felicidades llevas ${count} operaciones`);
+        else if (count >= 100) console.warn(`wow llevas ${count} operaciones...dud ahora si es recomendable que actualices la pagina`), alert(`wow llevas ${count} operaciones que locura no pensé que llegaras a tanto`);
+        else {
+            if (op == 1) {
+                n1 = parseInt(prompt("Ingresa el primer numero"));
+                n2 = parseInt(prompt("Ingresa el segundo numero"));
+                alert(`${n1} + ${n2} = ${calculadora.sumar(n1, n2)}`);
+                start();
 
-        } else if (op == 2) {
-            n1 = parseInt(prompt("Ingresa el primer numero"));
-            n2 = parseInt(prompt("Ingresa el segundo numero"));
-            alert(`${n1} - ${n2} = ${calculadora.restar(n1, n2)}`);
-            start(0);
-
-        } else if (op == 3) {
-            n1 = parseInt(prompt("Ingresa el primer numero"));
-            n2 = parseInt(prompt("Ingresa el segundo numero"));
-            alert(`${n1} * ${n2} = ${calculadora.multiplicar(n1, n2)}`);
-            start(0);
-
-        } else if (op == 4) {
-            n1 = parseInt(prompt("Ingresa el primer numero"));
-            n2 = parseInt(prompt("Ingresa el segundo numero"));
-
-            if (n1 == 0 || n2 == 0) {
-                alert(`${n1} / ${n2} = 0`);
+            } else if (op == 2) {
+                n1 = parseInt(prompt("Ingresa el primer numero"));
+                n2 = parseInt(prompt("Ingresa el segundo numero"));
+                alert(`${n1} - ${n2} = ${calculadora.restar(n1, n2)}`);
                 start(0);
 
+            } else if (op == 3) {
+                n1 = parseInt(prompt("Ingresa el primer numero"));
+                n2 = parseInt(prompt("Ingresa el segundo numero"));
+                alert(`${n1} * ${n2} = ${calculadora.multiplicar(n1, n2)}`);
+                start(0);
+
+            } else if (op == 4) {
+                n1 = parseInt(prompt("Ingresa el primer numero"));
+                n2 = parseInt(prompt("Ingresa el segundo numero"));
+
+                if (n1 == 0 || n2 == 0) {
+                    alert(`${n1} / ${n2} = 0`);
+                    start(0);
+
+                } else {
+                    alert(`${n1} / ${n2} = ${calculadora.dividir(n1, n2)}`);
+                    start(0);
+                }
+
+            } else if (op == 5) {
+                n1 = parseInt(prompt("Ingresa el primer numero"));
+                n2 = parseInt(prompt("Ingresa el segundo numero"));
+                alert(`${n1} ^ ${n2} = ${calculadora.potenciar(n1, n2)}`);
+                start(0);
+
+            } else if (op == 6) {
+                n1 = parseInt(prompt("Ingresa un numero"));
+                alert(`raíz cuadrada de ${n1} = ${calculadora.raiz2(n1)}`);
+                start(0);
+            } else if (op == 7) {
+                n1 = parseInt(prompt("Ingresa un numero"));
+                alert(`raíz cubica de ${n1} = ${calculadora.raiz3(n1)}`);
+                start(0);
             } else {
-                alert(`${n1} / ${n2} = ${calculadora.dividir(n1, n2)}`);
-                start(0);
+                break;
             }
-
-        } else if (op == 5) {
-            n1 = parseInt(prompt("Ingresa el primer numero"));
-            n2 = parseInt(prompt("Ingresa el segundo numero"));
-            alert(`${n1} ^ ${n2} = ${calculadora.potenciar(n1, n2)}`);
-            start(0);
-
-        } else if (op == 6) {
-            n1 = parseInt(prompt("Ingresa un numero"));
-            alert(`raíz cuadrada de ${n1} = ${calculadora.raiz2(n1)}`);
-            start(0);
-        } else if (op == 7) {
-            n1 = parseInt(prompt("Ingresa un numero"));
-            alert(`raíz cubica de ${n1} = ${calculadora.raiz3(n1)}`);
-            start(0);
-        } else {
-            break;
         }
     }
     alert("Bye");
