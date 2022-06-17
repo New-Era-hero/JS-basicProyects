@@ -14,8 +14,9 @@ const aprove = () => {
         let asistencias = materias[materia][0];
         let promedio = materias[materia][1];
         let practicas = materias[materia][2];
-
+       
         console.log(`${materias[materia][3]}`);
+        //conditions
         // asistencias
         asistencias >= 90 ?
             console.log("    %cBuenas asistencias", "color:green") : console.log("    %Falta de asistencias", "color:red");
