@@ -17,28 +17,21 @@ const aprove = () => {
 
         console.log(`${materias[materia][3]}`);
         // asistencias
-        if (asistencias >= 90)
-            console.log("    %cBuenas asistencias", "color:green");
-        else {
-            console.log("    %Falta de asistencias", "color:red");
-        }
+        asistencias >= 90 ?
+            console.log("    %cBuenas asistencias", "color:green") : console.log("    %Falta de asistencias", "color:red");
+
         //promedio
-        if (promedio >= 7) console.log("    %cPromedio suficiente", "color:green");
-        else {
-            console.log("    %cPromedio inaceptable", "color:red");
-        }
+        promedio >= 7 ?
+            console.log("    %cPromedio suficiente", "color:green") : console.log("    %cPromedio inaceptable", "color:red");
+
         //practicas
-        if (practicas >= 3)
-            console.log("    %cPracticas Suficientes", "color:green");
-        else {
-            console.log("    %cPracticas insuficientes", "color: red");
-        }
+        practicas >= 3 ?
+            console.log("    %cPracticas Suficientes", "color:green") : console.log("    %cPracticas insuficientes", "color: red");
+
         //Aprovado?
-        if (asistencias >= 90 && promedio >= 7 && practicas >= 3)
-            console.log("    %cAprovado Felicidades", "color:green");
-        else {
-            console.log("    %cReprovado lo sentimos", "color:red");
-        }
+        asistencias >= 90 && promedio >= 7 && practicas >= 3 ?
+            console.log("    %cAprovado Felicidades", "color:green") : console.log("    %cReprovado lo sentimos", "color:red");
+
     }
 };
 
